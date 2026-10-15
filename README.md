@@ -15,6 +15,9 @@ Java 17 + Spring Boot 3 + MySQL + Redis + Vue 3。围绕商品、订单、库存
 ### [Enterprise AI Ticket Copilot](https://github.com/jameswilson87156-del/enterprise-ai-ticket-copilot)
 Python 3.12 + FastAPI + Java/Spring Boot 的 AI 工单应用。围绕 Retrieval、Citation、Evaluation、Human Review 与 Observability 构建可验证证据链；Retrieval V2 在 16 条 synthetic 工单评测上将 Citation Precision 从 **81.11% 提升至 97.78%**，failed cases 从 **6 降至 1**。
 
+### [OfferFlow Copilot](https://github.com/jameswilson87156-del/offerflow-copilot)
+Java + AI 求职工作流案例：JD 解析、简历证据管理、匹配报告版本化，含 Provider Trace、Human Review 与复制权限治理。
+
 ### [DevFlow Copilot](https://github.com/jameswilson87156-del/devflow-copilot)
 AI Coding / Agent 工作流案例，展示 Provider Router、Prompt、Tool Call、Trace、Run Evidence 与 Human Review。Agent 指应用工作流与证据聚合，不包装为复杂自治 Multi-Agent Runtime。
 
