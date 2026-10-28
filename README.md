@@ -1,64 +1,42 @@
 # 王震龙 · Zhenlong Wang
 
-**2027 届软件工程本科生｜AI 全栈开发方向（Java 后端 + AI 应用）**
+**测试开发实习方向｜AI Agent 评测与系统自动化｜2027 届软件工程本科**
 
-以 Java 后端为基础，实践 Vue 3 / TypeScript 前端交付与 AI 应用集成；关注模型输出约束、业务事实校验、评测和运行证据。
+我希望做测试开发：把业务规则拆成可执行用例，让 API、浏览器和数据状态可以重复验证，并把失败原因与报告留成可复查证据。Java / Spring Boot 的开发背景让我能读懂被测服务与状态流转；当前项目实践重点是 Python / pytest、API 与 UI 自动化、Agent 行为评测和质量门禁。
 
-[个人作品集](https://wzl8.top) · [GitHub 项目](https://github.com/jameswilson87156-del)
+**求职方向：** 测试开发实习生、AI 测试 / Agent 评测实习生
 
-**求职范围：** 全国各地，接受异地；目前大四无课程安排。
+## 主项目
 
-## 精选项目
+### PromptOps Studio · AI Agent 评测与回归
 
-### CommerceFlow AI Mall
+固定测试集驱动确定性 Mock Agent，使用规则断言检查输出格式、业务约束、工具选择与参数；按运行展示逐条结果、Trace 和失败原因，并支持版本回归分析。
 
-商品、购物车、订单、库存与 AI 客服的全栈电商项目。重点展示订单状态流转、库存回补与重复请求处理，以及 AI 回答如何受业务事实约束。
+- 技术：Java 17、Spring Boot、Python、pytest、Vue 3、TypeScript、Playwright
+- 评测边界：当前仓库展示的是 Local Demo、Mock Output 与 Rule-based Eval；不把 Mock 结果说成真实模型准确率。
+- [项目仓库与 README](https://github.com/jameswilson87156-del/ai-agent-eval-promptops)
 
-**技术栈：** Java 17 · Spring Boot 3 · MySQL · Redis · Vue 3 · UniApp · FastAPI
+### Gitea Quality Lab · 开源系统质量自动化
 
-[查看仓库与验证记录](https://github.com/jameswilson87156-del/commerceflow-ai-mall)
+在隔离 Docker 环境中对 Gitea 28.2.0 做黑盒质量验证，覆盖 REST API、身份与权限、浏览器工作流和 SQLite 重启持久化；为每次运行生成 JSON、JUnit、HTML 与浏览器证据，并校验 JSON / JUnit 汇总一致。
 
-<a href="https://github.com/jameswilson87156-del/commerceflow-ai-mall"><img src="https://raw.githubusercontent.com/jameswilson87156-del/commerceflow-ai-mall/main/screenshots/v2/01-operations-overview-real.png" alt="CommerceFlow AI Mall 实际运行的运营总览截图" width="100%"></a>
+- 技术：Python 3.12、pytest、HTTPX、Playwright、Docker Compose、GitHub Actions
+- GitHub Actions run **40710451708**：24 个框架单元测试 + 16 个 Gitea 集成用例通过；目标为 CI 中的隔离 Gitea 实例。
+- [查看项目分支](https://github.com/jameswilson87156-del/gitea-quality-lab/tree/feat/gitea-quality-lab) · [查看 CI 记录](https://github.com/jameswilson87156-del/gitea-quality-lab/actions/runs/40710451708) · [查看验收证据](https://github.com/jameswilson87156-del/gitea-quality-lab/blob/feat/gitea-quality-lab/reports/evidence.md)
 
-### Enterprise AI Ticket Copilot
+## 测试开发实践
 
-面向工单处理的 AI 应用，覆盖分类、知识检索、引用展示、人工确认、运行追踪与失败降级。评测数据、逐样本结果和已知限制以仓库中的报告为准。
+- **用例设计：** 正常、边界、非法输入、权限、幂等、状态机与持久化场景。
+- **自动化：** Java / JUnit、Python / pytest、HTTPX、Playwright / Chromium。
+- **质量与性能：** Docker Compose、GitHub Actions、k6、Prometheus、Alertmanager。
+- **问题定位：** 固定输入、唯一 Run ID、逐条断言、报告一致性检查与失败证据。
 
-**技术栈：** Java 17 · Spring Boot 3 · Python · FastAPI
+## 目前的边界
 
-[查看仓库与验证记录](https://github.com/jameswilson87156-del/enterprise-ai-ticket-copilot)
+项目结果来自本地合成服务、隔离开源软件实例或 CI 临时环境，不代表企业生产测试经验、生产流量或大规模生产容量。PromptOps 当前使用 Mock Agent；尚未用真实模型建立质量基线。MySQL / Redis 的测试矩阵、真实团队缺陷闭环和经授权的生产系统验证仍需继续补齐。
 
-<a href="https://github.com/jameswilson87156-del/enterprise-ai-ticket-copilot"><img src="https://raw.githubusercontent.com/jameswilson87156-del/enterprise-ai-ticket-copilot/main/docs/images/ticket-workbench.png" alt="Ticket Copilot 实际运行的工单工作台截图" width="100%"></a>
+## 工程背景
 
-### 其他工程实践：DevFlow Copilot
+Java、Spring Boot、MyBatis、MySQL、Vue 3 与 TypeScript 是我理解和构造被测系统的基础。实习经历将按我实际承担的职责、问题案例和可核实结果补充；不把独立项目练习改写成任职测试经历。
 
-围绕 Prompt、Provider 调用、Tool Call、运行 Trace 和证据回放的 AI 工作流项目。项目中的 Agent 表述以应用工作流为边界，具体能力以仓库实现为准。
-
-[查看仓库](https://github.com/jameswilson87156-del/devflow-copilot)
-
-## 评测证据摘录
-
-<details>
-<summary>展开查看本地评测范围与限制</summary>
-
-- **Ticket Copilot：** 固定 16 条合成检索样本的迭代结果中，Citation Precision 从 81.11% 提升到 97.78%，失败样本从 6 条降到 1 条；EVAL-016 仍有误召回。该数据集参与过方法调整，不是独立盲测。
-- **CommerceFlow：** 本地 MOCK 评测覆盖 44 条常规问题、18 条复合问题和 90 条红队样本；另有 24 项 SKU 同义词定向测试。MOCK 结果不代表真实模型准确率，本轮没有真实模型请求。
-- **历史 DeepSeek 批次：** Ticket 普通分类 38/40、Macro-F1 0.9499；CommerceFlow 普通客服场景 22/22（19,324 tokens）。均为历史合成样本批次，不代表当前候选的模型质量，也与离线规则和 MOCK 结果分开统计。
-
-</details>
-
-## 实习经历
-
-**南京玻璃纤维研究设计院有限公司（江宁分公司）· 研发部** · 2026.08–2026.10
-
-参与公司在用企业内网系统的二次开发，围绕材料性能、原材料、微结构性能、工艺和仿真性能五类资源库，参与字段与表关系梳理、数据库结构和初始化脚本、REST API、分页关联查询、ZIP 资料批量导入、PDF/Excel 查看预览及旧页面兼容联调。
-
-**技术栈：** Java 17 · Spring Boot 3 · MyBatis-Plus · MySQL · Swagger/Knife4j
-
-## 技术方向
-
-- **Java 后端：** Java、Spring Boot、MyBatis-Plus、MySQL、Redis、REST API
-- **AI 应用：** Python、FastAPI、模型 Provider 接入、检索评测、Prompt、Tool Calling、人工复核
-- **全栈交付：** Vue 3、TypeScript、Vite、Next.js、Git、Docker、Linux
-
-> 项目指标只在对应仓库说明数据来源、样本范围和验证方式；合成数据、Mock 与真实模型结果分开记录，不代表生产效果。
+[个人作品集](https://wzl-ai-engineering-portfolio.tkvbzkyvsv.chatgpt.site) · [GitHub 项目列表](https://github.com/jameswilson87156-del)
