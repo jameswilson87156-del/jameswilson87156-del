@@ -21,9 +21,9 @@
 使用 26 条固定合成用例驱动确定性 Mock Agent，以规则检查输出格式、业务约束、工具选择与参数；逐条保存执行结果、Trace 和失败原因，并提供 JSON 报告与同数据集运行比较。
 
 - 技术：Java 17、Spring Boot、Python、pytest、Vue 3、TypeScript、Playwright
-- GitHub Actions run [40723393664](https://github.com/jameswilson87156-del/ai-agent-eval-promptops/actions/runs/40723393664)：Maven 36 项、Python API / 工具 26 项、浏览器端到端和 8 次稳定性采样通过。
+- GitHub Actions run [40724124012](https://github.com/jameswilson87156-del/ai-agent-eval-promptops/actions/runs/40724124012)：Maven 36 项、Python API / 工具 26 项、浏览器端到端和 8 次稳定性采样通过。
 - 每轮 26 条用例中保留 2 条确定性 Agent 行为失败样本；用例执行成功与 Agent 行为通过分开统计。当前是 Mock / 规则评测，不代表真实模型准确率。
-- [功能分支与 README](https://github.com/jameswilson87156-del/ai-agent-eval-promptops/tree/feat/agent-evaluation-platform) · [CI 证据](https://github.com/jameswilson87156-del/ai-agent-eval-promptops/actions/runs/40723393664)
+- [功能分支与 README](https://github.com/jameswilson87156-del/ai-agent-eval-promptops/tree/feat/agent-evaluation-platform) · [CI 证据](https://github.com/jameswilson87156-del/ai-agent-eval-promptops/actions/runs/40724124012)
 
 ## 测试开发实践
 
