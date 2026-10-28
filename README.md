@@ -6,6 +6,8 @@
 
 **求职方向：** 测试开发实习生、AI 测试 / Agent 评测实习生
 
+**个人作品集：** [测试开发作品集](https://ai-agent-portfolio-hub.vercel.app/)
+
 ## 主项目
 
 ### Gitea Quality Lab · 开源系统质量自动化
