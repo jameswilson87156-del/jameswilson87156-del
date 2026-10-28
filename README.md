@@ -39,4 +39,4 @@
 
 Java、Spring Boot、MyBatis、MySQL、Vue 3 与 TypeScript 是我理解和构造被测系统的基础。实习经历将按我实际承担的职责、问题案例和可核实结果补充；不把独立项目练习改写成任职测试经历。
 
-[个人作品集](https://wzl-ai-engineering-portfolio.tkvbzkyvsv.chatgpt.site) · [GitHub 项目列表](https://github.com/jameswilson87156-del)
+[GitHub 项目列表](https://github.com/jameswilson87156-del)
